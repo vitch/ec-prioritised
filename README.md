@@ -1,7 +1,13 @@
 # ec-prioritised
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This repository gives a quick demo of the use-case I was trying to solve with
+my [`enqueueWithPriority` PR](https://github.com/machty/ember-concurrency/pull/154)
+for `ember-concurrency`. 
+
+The demo can be seen [here](https://vitch.github.io/ec-prioritised/).
+
+It shows how we can use `enqueueWithPriority` to prioritise tasks loading data for
+recursively nested objects and can therefore provide a better user experiece.
 
 ## Prerequisites
 
