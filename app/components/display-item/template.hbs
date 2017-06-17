@@ -9,6 +9,9 @@
   </div>
   <div class="task-display is-{{item.taskC.state}}">
     C
+    {{#if item.taskC.isRunning}}
+      {{item.countTaskC}}
+    {{/if}}
   </div>
 </div>
 

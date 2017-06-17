@@ -53,8 +53,8 @@ const Item = EmberObject.extend({
 
   taskC: task(function* () {
     for (let i=0; i < 100; i++) {
-      yield timeout(Math.random() * 50);
-      this.set('countTaskC')
+      yield timeout(Math.random() * 100);
+      this.set('countTaskC', i)
     }
     this.set('_isCompleteC', true);
   }).group('group'),
