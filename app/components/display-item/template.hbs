@@ -14,12 +14,12 @@
 
 
 {{#if isShowingChildren}}
-  <a href="#" onclick={{action (mut isShowingChildren) false}}>- Hide children</a>
+  <a href="javascript:" onclick={{action (mut isShowingChildren) false}}>- Hide children</a>
   <ul>
     {{#each item.children as |child|}}
       {{display-item item=child}}
     {{/each}}
   </ul>
 {{else}}
-  <a href="#" onclick={{action (mut isShowingChildren) true}}>+ Show children</a>
+  <a href="javascript:" onclick={{action (mut isShowingChildren) true}}>+ Show children</a>
 {{/if}}
