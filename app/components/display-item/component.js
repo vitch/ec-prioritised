@@ -5,4 +5,12 @@ export default Component.extend({
   item: null,
 
   isShowingChildren: false,
+
+  didInsertElement() {
+    this.get('item').startShowing();
+  },
+
+  willDestroyElement() {
+    this.get('item').stopShowing();
+  },
 });

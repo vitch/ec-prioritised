@@ -1,7 +1,20 @@
 <h1>Standard <code>ember-concurrency</code></h1>
 
 <p>
-  Below is a list of items. Each item kicks off a number of tasks...
+  Below is a list of items. Each item kicks off three tasks when it is visible and the
+  tasks change colour as they proceed (from <div class="task-display is-queued is-inline">queued</div>
+  to <div class="task-display is-running is-inline">running</div> to
+  <div class="task-display is-idle is-inline">idle</div>).
+</p>
+
+<p>
+  You can show children of any item and at each level of children you get 10 * more. This allows you
+  to simulate load on the system.
+</p>
+
+<p>
+  Notice how each item's tasks complete in order. We actually want all of the A's to complete first, then
+  all of the B's and then all of the C's.
 </p>
 
 <ul>

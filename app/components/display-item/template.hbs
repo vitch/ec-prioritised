@@ -1,11 +1,25 @@
 <h2>{{item.label}}</h2>
 
+<div class="tasks">
+  <div class="task-display is-{{item.taskA.state}}">
+    A
+  </div>
+  <div class="task-display is-{{item.taskB.state}}">
+    B
+  </div>
+  <div class="task-display is-{{item.taskC.state}}">
+    C
+  </div>
+</div>
+
+
 {{#if isShowingChildren}}
+  <a href="#" onclick={{action (mut isShowingChildren) false}}>- Hide children</a>
   <ul>
     {{#each item.children as |child|}}
       {{display-item item=child}}
     {{/each}}
   </ul>
 {{else}}
-  <a href="#" onclick={{action (mut isShowingChildren true)}}>Show children</a>
+  <a href="#" onclick={{action (mut isShowingChildren) true}}>+ Show children</a>
 {{/if}}
