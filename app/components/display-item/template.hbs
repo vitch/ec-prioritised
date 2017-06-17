@@ -1,0 +1,11 @@
+<h2>{{item.label}}</h2>
+
+{{#if isShowingChildren}}
+  <ul>
+    {{#each item.children as |child|}}
+      {{display-item item=child}}
+    {{/each}}
+  </ul>
+{{else}}
+  <a href="#" onclick={{action (mut isShowingChildren true)}}>Show children</a>
+{{/if}}
