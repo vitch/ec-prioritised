@@ -30,9 +30,9 @@ const Item = EmberObject.extend({
   }),
 
   startShowing() {
-    if (!this.get('_isCompleteA')) this.get('taskA').perform();
-    if (!this.get('_isCompleteB')) this.get('taskB').perform();
-    if (!this.get('_isCompleteC')) this.get('taskC').perform();
+    if (!this.get('_isCompleteA')) this.get('taskA').perform(1000);
+    if (!this.get('_isCompleteB')) this.get('taskB').perform(2000);
+    if (!this.get('_isCompleteC')) this.get('taskC').perform(3000);
   },
 
   stopShowing() {

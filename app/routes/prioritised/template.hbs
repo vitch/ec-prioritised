@@ -1,4 +1,4 @@
-<h1>Standard <code>ember-concurrency</code></h1>
+<h1>Prioritised <code>ember-concurrency</code></h1>
 
 <p>
   Below is a list of items. Each item kicks off three tasks when it is visible and the
@@ -13,12 +13,9 @@
 </p>
 
 <p>
-  Notice how each item's tasks complete in order. We actually want all of the A's to complete first, then
-  all of the B's and then all of the C's.
-</p>
-
-<p>
-  Enter {{#link-to 'routes.prioritised'}}<code>enqueueWithPriority</code>{{/link-to}}
+  Notice how all of the A's to complete first, then all of the B's and then all of the C's. Additionally we
+  weight it by the depth of an item so all of the A's in the deepest nested children complete before those
+  in their ancestors (assuming the ancestors hadn't already started loading before you opened the children)
 </p>
 
 <ul>
